@@ -1,6 +1,6 @@
 .homeDesign{
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -8,9 +8,9 @@
 }
 
 .filmImage{
-    width: 350px;
+    width: 21em;
     height: auto;
-    margin: 10px;
+    margin: 0.5em;
     opacity: 0.8;
 }
 

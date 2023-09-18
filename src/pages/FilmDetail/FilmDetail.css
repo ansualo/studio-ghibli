@@ -1,8 +1,52 @@
 .detailDesign{
-    width: 60vw;
-    height: 80vh;
+    width: 90vw;
+    height: auto;
+    padding: 1.2em;
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(252, 250, 247);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    border-radius: 0.5em;
+    text-align: center;
+}
+
+.squareGroup{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.squaresInfo{
+    width: 35vw;
+    min-height: 30vh;
+    margin: 0.5em;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: bisque;
+    background-color: rgb(170, 126, 214);
+    box-shadow: rgba(184, 184, 220, 0.192) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    color: white;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+
+    .detailDesign{
+        width: 60vw;
+        height: 90vh;
+        padding: 3em;
+    }
+
+    .squareGroup{
+        flex-wrap: nowrap;
+    }
+
+    .squaresInfo{
+        width: 12em;
+        min-height: 10em;
+    }
 }
