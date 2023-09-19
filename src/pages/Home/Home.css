@@ -1,20 +1,25 @@
 .homeDesign{
-    width: 100vw;
+    width: auto;
     min-height: 100vh;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
 }
 
 .filmImage{
-    width: 21em;
+    width: 90vw;
     height: auto;
     margin: 0.5em;
-    opacity: 0.8;
+    opacity: 0.90;
 }
 
 .filmImage:hover{
     transform: scale(1.05);
     opacity: 1;
+}
+
+@media (min-width: 768px) {
+    .filmImage{
+        width: 25vw;
+    }
+
 }

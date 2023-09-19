@@ -1,6 +1,6 @@
 .detailDesign{
     width: 90vw;
-    height: auto;
+    min-height: auto;
     padding: 1.2em;
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@
     font-weight: bold;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
 
     .detailDesign{
         width: 60vw;

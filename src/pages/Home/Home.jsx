@@ -25,7 +25,7 @@ export const Home = () => {
     return (
         <div className="homeDesign">
 
-            <CustomModal show={modalShow} onHide={() => setModalShow(false)}>
+            <CustomModal show={modalShow} onClick={() => setModalShow(false)}>
                 <FilmDetail film={oneFilm} />
             </CustomModal>
             {allFilms.map(film => {

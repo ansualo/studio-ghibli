@@ -1,5 +1,4 @@
 import Modal from 'react-bootstrap/Modal';
-import './Modal.css'
 
 export const CustomModal = (props) => {
     return (
