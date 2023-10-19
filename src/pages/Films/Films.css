@@ -1,0 +1,32 @@
+.homeDesign{
+    width: auto;
+    height: 75vh;
+    margin-top: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filmImage{
+    width: 80vw;
+    height: auto;
+    margin: 0.5em;
+    opacity: 0.90;
+}
+
+.filmImage:hover{
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+@media (min-width: 1025px) {
+    .homeDesign{
+        height: 80vh;
+        margin-top: 15vh;
+    }
+
+    .filmImage{
+        width: 23vw;
+        margin: 0.3em;
+    }
+}

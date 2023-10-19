@@ -1,0 +1,31 @@
+.searchMenu{
+    min-height: 5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.searchGroup{
+    display: flex;
+    gap: 1em;
+}
+
+.searchButton{
+    border-radius: 0.5em;
+    background-color: rgb(164, 52, 125);
+    color: white;
+    padding: 0.3em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.searchInput{
+    border-radius: 0.5em;
+}
+
+
+@media (mix-width: 1024px) {
+    .searchMenu{
+        min-height: 5em;
+    }
+
+}

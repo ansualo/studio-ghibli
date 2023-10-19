@@ -1,0 +1,22 @@
+.headerDesign{
+    width: 100vw;
+    height: 25vh;
+}
+
+.ghibliLogo{
+    width: 40vw;
+    height: auto; 
+}
+
+@media (min-width: 768px) {
+
+    .headerDesign{
+        height: 15vh;
+    }
+
+    .ghibliLogo{
+        width: 12vw;
+        height: auto; 
+    }
+
+}

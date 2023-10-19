@@ -1,6 +1,10 @@
 import './FilmDetail.css'
 
-export const FilmDetail = ({ film }) => {
+export const FilmDetail = ({ film, loading }) => {
+
+    if(loading){
+        return <p>Loading...</p>
+    }
 
     return (
         <div className="detailDesign">
@@ -27,8 +31,6 @@ export const FilmDetail = ({ film }) => {
                     <div className="fs-6">RUNNING TIME</div>
                 </div>
             </div>
-
-
         </div>
     )
 }
