@@ -4,7 +4,6 @@
     margin-top: 25vh;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .filmImage{
@@ -21,7 +20,7 @@
 
 @media (min-width: 1025px) {
     .homeDesign{
-        height: 80vh;
+        height: 82vh;
         margin-top: 15vh;
     }
 

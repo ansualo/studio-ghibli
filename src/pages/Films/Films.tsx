@@ -5,17 +5,16 @@ import { useFilms } from "../../hooks/useFilms";
 import { useDetail } from '../../hooks/useDetail';
 import { FilmDetail } from "../FilmDetail/FilmDetail";
 
-export const Films = () => {
+export const Films:React.FC = () => {
 
     const { allFilms, searchedFilm } = useFilms()
-    const [selectedFilm, setSelectedFilm] = useState()
+    const [selectedFilm, setSelectedFilm] = useState("")
     const { detailFilm, detailLoading } = useDetail(selectedFilm)
     const [modalShow, setModalShow] = useState(false);
 
     if (!allFilms) {
         return <p>Loading...</p>
     }
-
 
     return (
         <div className="homeDesign">

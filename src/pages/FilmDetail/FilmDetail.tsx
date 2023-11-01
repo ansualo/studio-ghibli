@@ -1,8 +1,14 @@
+import { type Film } from '../../types'
 import './FilmDetail.css'
 
-export const FilmDetail = ({ film, loading }) => {
+interface Props {
+    film: Film | null
+    loading: boolean
+}
 
-    if(loading){
+export const FilmDetail: React.FC<Props> = ({ film, loading }) => {
+
+    if(loading || !film){
         return <p>Loading...</p>
     }
 

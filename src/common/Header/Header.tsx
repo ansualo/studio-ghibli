@@ -1,10 +1,10 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import './Header.css'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.png' 
 import { SearchBar } from '../SearchBar/SearchBar';
 
-export const Header = () => {
+export const Header:React.FC = () => {
     return (
         <Navbar className="headerDesign" fixed="top">
             <Container className="flex-column flex-md-row"> 

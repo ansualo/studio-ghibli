@@ -3,12 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Header } from './common/Header/Header';
 import { Films } from './pages/Films/Films';
 import { createContext, useState } from 'react';
+import { SearchContextType } from './types';
 
-export const SearchContext = createContext()
+export const SearchContext = createContext<SearchContextType>({ searchedString: '', setSearchedString: () => {} })
 
 function App() {
 
-  const [searchedString, setSearchedString] = useState("")
+  const [searchedString, setSearchedString] = useState<string>("")
 
   return (
     <>
@@ -16,7 +17,6 @@ function App() {
         <Header />
         <Films />
       </SearchContext.Provider>
-
     </>
   )
 }

@@ -2,15 +2,16 @@ import { useContext, useEffect, useState } from "react"
 import { useFilms } from "../../hooks/useFilms"
 import "./SearchBar.css"
 import { SearchContext } from "../../App"
+import { type SearchContextType } from "../../types"
 
-export const SearchBar = () => {
+export const SearchBar:React.FC = () => {
 
-    const [search, setSearch] = useState("")
-    const [notFound, setNotFound] = useState("")
-    const { searchedString, setSearchedString } = useContext(SearchContext)
+    const [search, setSearch] = useState<string>("")
+    const [notFound, setNotFound] = useState<string>("")
+    const { searchedString, setSearchedString } = useContext<SearchContextType>(SearchContext)
     const { searchedFilm } = useFilms()
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault()
         if (search.startsWith(" ")) return
         setSearchedString(search)

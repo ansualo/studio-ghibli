@@ -7,7 +7,7 @@ export const getFilms = async () => {
     return res.data
 }
 
-export const getFilmById = async (id) => {
+export const getFilmById = async (id: string) => {
     let res = await axios.get(`${URL}/films/${id}`)
     return res.data
 }

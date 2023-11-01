@@ -1,16 +1,17 @@
 import { useContext, useEffect, useState } from "react";
 import { getFilms } from "../services/apiCalls";
 import { SearchContext } from "../App";
+import { type Film, type SearchContextType } from "../types";
 
 export const useFilms = () => {
 
-    const [allFilms, setAllFilms] = useState([]);
-    const { searchedString, setSearchedString } = useContext(SearchContext)
+    const [allFilms, setAllFilms] = useState<Film[]>([]);
+    const { searchedString } = useContext<SearchContextType>(SearchContext)
 
     useEffect(() => {
         getFilms()
-            .then(res => setAllFilms(res))
-            .catch(error => console.log(error))
+            .then((res: Film[]) => setAllFilms(res))
+            .catch((error: Error) => console.log(error))
     }, [])
 
 
