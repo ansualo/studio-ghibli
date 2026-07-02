@@ -1,21 +1,26 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import { getFilms } from "../services/apiCalls";
 import { SearchContext } from "../App";
 import { type Film, type SearchContextType } from "../types";
 
 export const useFilms = () => {
+  const [allFilms, setAllFilms] = useState<Film[]>([]);
+  const { searchedString } = useContext<SearchContextType>(SearchContext);
 
-    const [allFilms, setAllFilms] = useState<Film[]>([]);
-    const { searchedString } = useContext<SearchContextType>(SearchContext)
+  useEffect(() => {
+    getFilms()
+      .then((res: Film[]) => setAllFilms(res))
+      .catch((error: Error) => console.log(error));
+  }, []);
 
-    useEffect(() => {
-        getFilms()
-            .then((res: Film[]) => setAllFilms(res))
-            .catch((error: Error) => console.log(error))
-    }, [])
+  const searchedFilm = useMemo(() =>
+      allFilms.filter((film) =>
+        film.title.toLowerCase().includes(searchedString.toLowerCase().trim())
+      ),
+    [searchedString, allFilms]
+  );
 
+  // if searchedFilm === ""  then return allFilms, if not return searchedFilms. Call it films to display
 
-    const searchedFilm = (allFilms.find(film => film.title.toLowerCase() === searchedString.toLowerCase().trim()))
-
-    return { allFilms, searchedFilm }
-}
+  return { allFilms, searchedFilm };
+};

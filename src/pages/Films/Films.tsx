@@ -20,9 +20,14 @@ export const Films:React.FC = () => {
         <div className="homeDesign">
             {searchedFilm
                 ? (
-                    <div onClick={() => { setSelectedFilm(searchedFilm.id); setModalShow(true) }}>
-                        <img src={searchedFilm.image} alt="Poster of the film" className="filmImage" />
-                    </div>
+                    searchedFilm.map(film => {
+                        return (
+                            <div key={film.id} onClick={() => { setSelectedFilm(film.id); setModalShow(true) }}>
+                                <img src={film.image} alt="Poster of the film" className="filmImage" />
+                            </div>
+                        )
+                    })
+
                 )
                 : (
                     allFilms.map(film => {
